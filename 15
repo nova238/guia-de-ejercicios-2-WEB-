@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ejercicio 15</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <p> Procesador:</p>
+        <p><select id="procesador">
+                <option value="400">Intel I3</option>
+                <option value="600">Intel I5</option>
+                <option value="800">Intel I7</option>
+         </select></p>
+        <p> Procesador:</p>
+        <p><select id="monitor">
+                <option value="250">Monitor Samsung 20'</option>
+                <option value="350">Monitor Samsung 22'</option>
+                <option value="550">Monitor Samsung 26'</option>
+        </select></p>
+        <p> Disco duro:</p>
+        <p><select id="discoduro">
+                <option value="300">Disco Duro 500 Gb</option>
+                <option value="440">Disco Duro 1 Tb</option>
+                <option value="500">Disco Duro 3 Tb</option>
+           </select></p>
+        <p><input type="button" value="Calcular Presupuesto" onClick="calcularPresupuesto()"></p>
+        <p><input type="text" id="resultado"></p>
+    </form>
+
+    <script>
+        function calcularPresupuesto() {
+            let ele1 = document.getElementById('procesador')
+            let precio1 = ele1.options[ele1.selectedIndex].value;
+            let ele2 = document.getElementById('monitor')
+            let precio2 = ele2.options[ele2.selectedIndex].value;
+            let ele3 = document.getElementById('discoduro')
+            let precio3 = ele3.options[ele3.selectedIndex].value;
+            precio1 = parseInt(precio1);
+            precio2 = parseInt(precio2);
+            precio3 = parseInt(precio3);
+            let suma = precio1 + precio2 + precio3;
+            document.getElementById('resultado').value = suma;
+        }
+    </script>
+
+</body>
+
+</html>

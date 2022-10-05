@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ejercicio 17</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let x1, x2, suma;
+        x1 = parseInt(prompt('Ingrese el primer valor:'));
+        x2 = parseInt(prompt('Ingrese el segundo valor:'));
+        if (isNaN(x1) || isNaN(x2)) {
+            document.write('Al menos uno de los dos valores ingresados no es numérico.');
+        } else {
+            suma = x1 + x2;
+            document.write('La suma de los dos valores es:' + suma);
+        }
+    </script>
+
+</body>
+
+</html>

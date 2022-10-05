@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ejercicio 19</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <input type="checkbox" id="checkbox1" name="checkbox1"> Confirma los términos y condiciones?
+    <br>
+    <input type="button" id="boton1" name="boton1" value="confirmar" disabled>
+
+    <script>
+        document.getElementById('checkbox1').addEventListener('change', seleccion);
+
+        function seleccion() {
+            if (document.getElementById('checkbox1').checked == true) {
+                document.getElementById('boton1').disabled = false;
+            } else
+                document.getElementById('boton1').disabled = true;
+        }
+    </script>
+
+</body>
+
+</html>

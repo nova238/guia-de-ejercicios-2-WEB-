@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ejercicio 16</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        Ingrese nombre de usuario:
+        <input type="text" id="usuario"><br> Ingrese clave:
+        <input type="password" id="clave" onBlur="verificar(this)"><br>
+        <input type="button" value="confirmar">
+    </form>
+
+    <script>
+        function verificar(control) {
+            if (control.value.length < 7 || control.value.length > 20) {
+                alert('cantidad de caracteres no valido en la clave(deben ser entre 7-20 caracteres)');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
